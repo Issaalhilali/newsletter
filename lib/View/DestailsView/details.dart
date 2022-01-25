@@ -30,7 +30,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           children: [
             //col-1 for show image from model
             CachedNetworkImage(
-              imageUrl: widget.image!,
+              imageUrl: widget.image ?? "",
               imageBuilder: (context, imageProvider) => Container(
                 width: size.width,
                 height: 220,
@@ -94,13 +94,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     child: Column(
                       children: [
                         Text(
-                          widget.description!,
+                          widget.description ?? "",
                           style: GoogleFonts.notoSerif(
                               fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          widget.content!,
+                          widget.content ?? "",
                           style: GoogleFonts.notoSerif(
                               fontWeight: FontWeight.bold),
                         ),

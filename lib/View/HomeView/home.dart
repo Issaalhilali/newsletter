@@ -89,7 +89,7 @@ class _HomeScrenState extends State<HomeScren> {
                   Padding(
                     padding: const EdgeInsets.all(1.0),
                     child: CachedNetworkImage(
-                      imageUrl: '${data.urlToImage}',
+                      imageUrl: data.urlToImage ?? "",
                       imageBuilder: (context, imageProvider) => Container(
                         width: 80.0,
                         height: 110.0,
@@ -128,7 +128,7 @@ class _HomeScrenState extends State<HomeScren> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          data.title!,
+                          data.title ?? "",
                           style: GoogleFonts.notoSerif(
                               fontWeight: FontWeight.bold),
                         ),
