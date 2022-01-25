@@ -24,9 +24,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
       ),
       body: Container(
         padding: const EdgeInsets.all(6),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             //col-1 for show image from model
             CachedNetworkImage(
