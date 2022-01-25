@@ -76,6 +76,7 @@ class _HomeScrenState extends State<HomeScren> {
                         title: data.title,
                         image: data.urlToImage,
                         description: data.description,
+                        content: data.content,
                       ))),
           child: Card(
             elevation: 2,
@@ -150,6 +151,7 @@ class _HomeScrenState extends State<HomeScren> {
                                         title: data.title,
                                         image: data.urlToImage,
                                         description: data.description,
+                                        content: data.content,
                                       ))),
                           child: Container(
                             width: MediaQuery.of(context).size.width,

@@ -5,8 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class DetailsScreen extends StatefulWidget {
-  String? image, title, description;
-  DetailsScreen({Key? key, this.title, this.image, this.description})
+  String? image, title, description, content;
+  DetailsScreen(
+      {Key? key, this.title, this.image, this.description, this.content})
       : super(key: key);
 
   @override
@@ -90,9 +91,20 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      widget.description!,
-                      style: GoogleFonts.notoSerif(fontWeight: FontWeight.bold),
+                    child: Column(
+                      children: [
+                        Text(
+                          widget.description!,
+                          style: GoogleFonts.notoSerif(
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          widget.content!,
+                          style: GoogleFonts.notoSerif(
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                   ),
                 ],
