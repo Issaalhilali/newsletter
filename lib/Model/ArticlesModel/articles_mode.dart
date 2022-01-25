@@ -2,7 +2,6 @@ class ArticlesModel {
   final String? title;
   final String? description;
   final String? urlToImage;
-
   final String? publishedAt;
 
   ArticlesModel(

@@ -7,6 +7,7 @@ import 'package:newslitter/Services/Api/api_status.dart';
 import 'package:newslitter/Utils/Constant/constants.dart';
 
 class GetData {
+  //for get data from url api and convert to json with data model
   static fetchData() async {
     try {
       final response = await http.get(Uri.parse(apiUrl));
@@ -17,7 +18,6 @@ class GetData {
         List<ArticlesModel> articlesList = articles.art
             .map<ArticlesModel>((json) => ArticlesModel.fromJson(json))
             .toList();
-
         return Sucess(response: articlesList);
       }
       return Failure(code: INVALID_RESPONSE, errorresponse: 'Invalid Response');

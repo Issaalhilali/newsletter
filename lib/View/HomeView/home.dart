@@ -49,6 +49,7 @@ class _HomeScrenState extends State<HomeScren> {
       return const AppLoading();
     }
     if (articlesListView.arterror != null) {
+      //for any error
       return Padding(
         padding: const EdgeInsets.all(30.0),
         child: Center(child: Text(AppLocalizations.of(context)!.error)),
@@ -58,6 +59,7 @@ class _HomeScrenState extends State<HomeScren> {
         child: ListView.separated(
       itemCount: articlesListView.articlesList.length,
       itemBuilder: (context, index) {
+        //for get data from provider
         ArticlesModel data = articlesListView.articlesList[index];
         return GestureDetector(
           onTap: () => Navigator.push(
@@ -75,6 +77,7 @@ class _HomeScrenState extends State<HomeScren> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  //row-1 for show image from model
                   Padding(
                     padding: const EdgeInsets.all(1.0),
                     child: CachedNetworkImage(
@@ -108,6 +111,7 @@ class _HomeScrenState extends State<HomeScren> {
                       ),
                     ),
                   ),
+                  //row-12 for show colum two string title and published date from model
                   Expanded(
                       child: Padding(
                     padding: const EdgeInsets.only(top: 2, right: 4, left: 4),

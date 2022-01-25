@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class DetailsScreen extends StatefulWidget {
   String? image, title, description;
   DetailsScreen({Key? key, this.title, this.image, this.description})
@@ -26,6 +27,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            //col-1 for show image from model
             CachedNetworkImage(
               imageUrl: widget.image!,
               imageBuilder: (context, imageProvider) => Container(
@@ -56,6 +58,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 ),
               ),
             ),
+            //col-2 for show title and from model
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -75,6 +78,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 ],
               ),
             ),
+            //col-3 for show description and from model
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
