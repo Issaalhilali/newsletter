@@ -1,9 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslitter/Model/ArticlesModel/articles_mode.dart';
 import 'package:newslitter/Utils/Components/app_loading.dart';
+import 'package:newslitter/Utils/Components/connectionapp.dart';
 import 'package:newslitter/View/DestailsView/details.dart';
 import 'package:newslitter/ViewModel/articlesViewModel.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -37,9 +39,14 @@ class _HomeScrenState extends State<HomeScren> {
                     )
                   ])),
         ),
-        body: Column(
+        body: Stack(
           children: [
-            _ui(_listView),
+            Column(
+              children: [
+                _ui(_listView),
+              ],
+            ),
+            const ConnectionStatusBars(),
           ],
         ));
   }

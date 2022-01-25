@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:newslitter/View/HomeView/home.dart';
 import 'package:newslitter/ViewModel/articlesViewModel.dart';
 import 'package:provider/provider.dart';
+import 'package:connection_status_bar/connection_status_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
