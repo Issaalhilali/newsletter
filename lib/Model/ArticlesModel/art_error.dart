@@ -1,6 +1,6 @@
 class ArticError {
-  var code;
-  var message;
+  int? code;
+  Object? message;
 
   ArticError({this.code, this.message});
 }

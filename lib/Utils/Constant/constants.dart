@@ -4,7 +4,11 @@ const String apiUrl =
     'https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey';
 
 //for error
+// ignore: constant_identifier_names
 const INVALID_RESPONSE = 100;
+// ignore: constant_identifier_names
 const NO_INTERNET = 101;
+// ignore: constant_identifier_names
 const INVALID_FORMAT = 102;
+// ignore: constant_identifier_names
 const UNKOWN_ERROR = 103;

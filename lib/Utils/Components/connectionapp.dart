@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:connection_status_bar/connection_status_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ConnectionStatusBars extends StatelessWidget {
   const ConnectionStatusBars({

@@ -4,7 +4,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:newslitter/View/HomeView/home.dart';
 import 'package:newslitter/ViewModel/articlesViewModel.dart';
 import 'package:provider/provider.dart';
-import 'package:connection_status_bar/connection_status_bar.dart';
 
 void main() {
   runApp(const MyApp());
