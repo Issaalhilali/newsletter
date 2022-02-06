@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.newslitter">
    <application
-        android:label="newslitter"
+        android:label="newapp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

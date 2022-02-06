@@ -51,6 +51,7 @@ class _HomeScrenState extends State<HomeScren> {
         ));
   }
 
+//for show list neows
   _ui(ArticlesListView articlesListView) {
     if (articlesListView.loading) {
       return const AppLoading();
@@ -64,7 +65,9 @@ class _HomeScrenState extends State<HomeScren> {
     }
     return Expanded(
         child: ListView.separated(
-      itemCount: articlesListView.articlesList.length,
+      itemCount: articlesListView.articlesList == null
+          ? 0
+          : articlesListView.articlesList.length,
       itemBuilder: (context, index) {
         //for get data from provider
         ArticlesModel data = articlesListView.articlesList[index];
